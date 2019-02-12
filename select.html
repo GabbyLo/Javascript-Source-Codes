@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<label>Character: </label>
+<select id="character">
+	<option>Alucard</option>
+	<option>Miya</option>
+	<option>Franco</option>
+</select><br>	
+<label>Equipment</label>
+<select id="equip">
+	<option> Jungler </option>
+	<option> Carry </option>
+	<option> Tank </option>
+	<option> Support </option>
+	<option> AFKer </option>
+</select><br>	
+<button id="start" onclick="test()">START</button>
+
+<p id="dhero">	</p>
+<p id="dequipment">	</p>
+	
+<img hidden="true" width="200px" id="alu" src="alucard.jpg">
+<img hidden="true" width="200px" id="miy" src="miya.jpg">
+<img hidden="true" width="200px" id="fra" src="franco.jpg">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+
+<script type="">
+	function test()
+	{
+		var Hero = document.getElementById('character').options;
+		var x=document.getElementById('character').selectedIndex;
+
+		var Equip = document.getElementById('equip').options;
+		var y=document.getElementById('equip').selectedIndex;
+		var herooption=Hero[x].value;
+		var equipoption=Equip[y].value;
+		display(herooption,equipoption);
+
+	}
+
+	function display(hero,equip)
+	{
+		
+		document.getElementById('dhero').innerHTML=hero;
+		document.getElementById('dequipment').innerHTML=equip;
+	}
+
+	$(function(){
+		$("#start").click(function(){
+			var Hero = document.getElementById('character').options;
+		var x=document.getElementById('character').selectedIndex;
+		var herooption=Hero[x].value;
+		$("img").hide();
+		if (herooption=="Alucard") {
+			$("#alu").FadeIn("1000");
+		}
+		else if (herooption=="Miya") {
+			$("#miy").show();
+		}
+		else if (herooption=="Franco"){
+			$("#fra").show();
+		}
+		{
+
+		}
+		})
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<label>Username: </label>
+<input id="usern" type="" value="Gabby" name=""><br><br>
+<textarea id="texa"></textarea><br>
+<button onclick="send()">SEND</button>
+<p id="messages"></p>
+
+<script type="text/javascript">
+	var mes="";
+	function send()
+	{
+		var user=document.getElementById('usern').value;
+		user=user+" says: ";
+		mes=document.getElementById("texa").value;
+		mes=user+mes;
+		var oldmes=document.getElementById('messages').innerHTML;
+		var empmes=user+"<br>";
+		empmes+=oldmes;
+		document.getElementById('messages').innerHTML=empmes+toString(now());
+	}
+</script>
+</body>
+</html>

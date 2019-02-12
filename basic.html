@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<label>FIRST NAME</label><br>
+	<input type="text" name="" id="fname"><br>
+	<label>LAST NAME</label><br>
+	<input type="text" name="" id="lname"><br>
+	<label>AGE</label><br>
+	<input type="text" name="" id="age">
+
+	<button onclick="person.display()">Show Object</button>
+	<p id="output"></p>
+<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		
+
+
+		var person={
+			firstname,
+			lastname,
+			age,
+			getvalues:function(){
+				this.firstname=document.getElementById("fname").value;
+				this.lastname=document.getElementById("lname").value;
+				this.age=Number(document.getElementById("age").value);
+			},
+			display:function(){
+				this.getvalues();
+				document.write("Your name is "+this.firstname+" "+this.lastname+". And your age is "+this.age);
+			}
+		}
+	</script>
+</body>
+</html>
