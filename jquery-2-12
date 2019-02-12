@@ -4,6 +4,7 @@
 	<title></title>
 </head>
 <body>
+	<h1>JQuery Demo</h1>
  	<label>Fruits</label>
  	<select id="fruits">
  		<option>Apple</option>
