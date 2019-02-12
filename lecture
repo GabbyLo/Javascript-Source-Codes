@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+ 	<label>Fruits</label>
+ 	<select id="fruits">
+ 		<option>Apple</option>
+ 		<option>Banana</option>
+ 		<option>Cucumber</option>
+ 		<option>Mango</option>
+ 		 	
+ 		 </select><br>
+ 		 	<button onclick="showfr()">Start</button><br>
+ 		 	<label>STRAND</label>
+ 		 	<select id="STRAND">
+ 		 		<option>GAS</option>
+ 		 		<option>HUMMS</option>
+ 		 		<option>ICT</option>
+ 		 		<option>ABM</option>
+
+ 		 		 </select><br>
+ 		 	<button onclick="showst()">Start</button><br>
+
+ 		 	<hr>
+ 		 	<button id="1">ALUCARD</button>
+ 		 	<button id="2">MIYA</button>
+ 		 	<button id="3">FRANCO</button><br><br>
+ 		 	<img id="a" src="alucard.jpg" width="200" hidden="true">
+ 		 	<img id="m" src="miya.jpg"  width="200" hidden="true">
+ 		 	<img id="f" src="franco.jpg"  width="200" hidden="true">
+
+ 		 	<input type="text" id="numberi" name="">
+
+ 		 	<p>Output: </p><p id="output"></p>
+
+ 	<script type="text/javascript" src="jquery.js"></script>
+ 	<script type="text/javascript">
+ 		function showfr()
+ 		{
+ 		var froption=document.getElementById('fruits').options;
+ 		var frindex=document.getElementById('fruits').selectedIndex;
+ 		var selected = froption[frindex].value;
+ 		alert(selected);
+ 	}
+
+ 	function showst()
+ 	{
+ 		var stoption=document.getElementById('STRAND').options;
+ 		var stindex=document.getElementById('STRAND').selectedIndex;
+ 		var sselected = stoption[stindex].value;
+ 		alert(sselected);
+ 	}
+
+ 	$(function(){
+ 		$("button").click(function(){
+ 			$("img").hide();
+ 		})
+ 		$("#1").click(function(){
+ 			$("#a").show();
+ 		})
+ 		$("#2").click(function(){
+ 			$("#m").show();
+ 		})
+ 		$("#3").click(function(){
+ 			$("#f").show()
+ 		})
+
+ 		$("#numberi").keyup(function(){
+ 			var thevalue=document.getElementById('numberi').value;
+ 			var result="";
+ 			var strthevalue=thevalue.toString();
+ 			if (isNaN(thevalue)==true) {
+ 				result="Sorry it's not a number";
+ 			}
+ 			else
+ 			{
+ 				result="It's a number";
+ 			}
+
+ 			var	req="";
+ 			if (strthevalue.length<7) {
+ 				req="Too Weak"
+ 			}
+ 			else
+ 			{
+ 				req="Strong"
+ 			}
+
+ 			document.getElementById('output').innerHTML=result+"<br>"+req;
+ 		})
+ 	})
+
+
+ 	</script>
+</body>
+</html>
