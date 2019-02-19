@@ -29,10 +29,17 @@
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(function(){
-		$(".fra").click(function(){
-			$("img").fadeTo("fast",0.5);
-			$(this).fadeTo("fast",1.0);
+		$(".fra").hover(function(){
+			$(this).fadeTo("1000",1.0);
+			$(this).animate({width:"160px"})
+		
 		})
+		$(".fra").mouseleave(function(){
+			$(this).fadeTo("1000",0.5);
+			$(this).animate({width:"150px"})
+		})
+
+	
 	})
 </script>
 </body>
