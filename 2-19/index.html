@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#a{
+			width: 100px;
+			height: 100px;
+			background-color:red;
+			margin-left: 100px;
+
+		}
+		.fra{
+			width: 150px;
+			opacity: 0.5;
+		}
+	</style>
+</head>
+<body>
+<div id="a"></div>
+
+<img src="franco.jpg" class="fra">
+<img src="franco.jpg" class="fra">
+<img src="franco.jpg" class="fra">
+<img src="franco.jpg" class="fra">
+
+
+
+<script src="jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".fra").click(function(){
+			$("img").fadeTo("fast",0.5);
+			$(this).fadeTo("fast",1.0);
+		})
+	})
+</script>
+</body>
+</html>
