@@ -10,10 +10,20 @@
 <input type="radio" name="strand" value="GAS">GAS <br>
 <input type="radio" name="strand" value="HUMSS"> HUMSS <br>
 <hr>
-<input type="checkbox" name="strand" value="ICT">ICT <br>
-<input type="checkbox" name="strand" value="ABM">ABM <br>
-<input type="checkbox" name="strand" value="GAS">GAS <br>
-<input type="checkbox" name="strand" value="HUMSS"> HUMSS <br>
 
+<button onclick="check()"></button>
+
+<script type="text/javascript">
+	function check()
+	{
+		var sstrand=document.getElementsByName('strand');
+		for (var i = 0; i < sstrand.length; i++) {
+			if (sstrand[i].checked) {
+				alert(strand[i]).value;
+				break;
+			}
+		}
+	}
+</script>
 </body>
 </html>
