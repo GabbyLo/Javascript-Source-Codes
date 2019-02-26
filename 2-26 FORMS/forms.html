@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p name="text">a</p>
+	<p name="text">b</p>
+	<p name="text">c</p>
+	<p name="text">d</p>
+	<p name="text">e</p>
+	<p name="text">f</p>
+	<p name="text">g</p>
+<hr>
+<p>output</p>
+<h3 id='output'></h3>
+
+<script type="text/javascript">
+	var x=document.getElementsByName('text');
+	var items="";
+	for (var i = 0; i < x.length; i++) {
+		items+="item: "+i+ " is "+ x[i].innerHTML+"<br>";
+	}
+	document.getElementById('output').innerHTML=items;
+</script>
+</body>
+</html>
