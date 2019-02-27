@@ -19,7 +19,10 @@
 	var x=document.getElementsByName('text');
 	var items="";
 	for (var i = 0; i < x.length; i++) {
+		if(true){
 		items+="item: "+i+ " is "+ x[i].innerHTML+"<br>";
+	}
+
 	}
 	document.getElementById('output').innerHTML=items;
 </script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<label>GENDER</label> <br>
+<input type="radio" name="gender" value="MALE">MALE <br>
+<input type="radio" name="gender" value="FEMALE"> FEMALE <br>
+<hr>
+<label>STRANDS</label><br>
+<input type="radio" name="strand" value="ICT"> ICT <br>
+<input type="radio" name="strand" value="GAS"> GAS <br>
+<input type="radio" name="strand" value="HUMSS"> HUMSS <br>
+<br>
+<h4 style="margin:0px;padding:0px">REQUIREMENTS SUBMITTED</h4><br>
+<input type="checkbox" name="require" value="NSO BIRTH CERTIFICATE">NSO BIRTH CERTIFICATE <br>
+<input type="checkbox" name="require" value="FORM 137">FORM 137 <br>
+<input type="checkbox" name="require" value="GOOD MORAL">GOOD MORAL<br>
+<button onclick="showselected()">SHOW</button>
+<h2 id="out"></h2>
+
+<script type="text/javascript">
+	
+	function showselected()
+	{
+		var x = document.getElementsByName('gender');
+		for (var o=0;o<x.length;o++)
+		{
+			if(x[o].checked)
+			{
+				alert("you selected "+x[o].value);
+				break;
+			}
+		}
+		var y = document.getElementsByName('strand');
+		for (var h = 0; h<y.length; h++){
+			if (y[h].checked)
+			{
+				document.getElementById('out').innerHTML= "You selected"+ y[h].value;
+				break;
+			}
+		}
+			var z = document.getElementsByName('require');
+			var selected="";
+			for (var a = 0; a<z.length; a++){
+				if (z[a].checked)
+				{
+					selected+=z[a].value + ",";
+				}
+
+			}
+			alert("you selected "+ selected);
+		}
+</script>
+</body>
+</html>
